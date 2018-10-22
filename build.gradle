@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'groovy'
+    id 'checkstyle'
+    id 'findbugs'
+    id 'jacoco'
+    id "org.springframework.boot" version "1.4.2.RELEASE"
+}
+
+group 'spring-boot-demo'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    //classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE")
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}
